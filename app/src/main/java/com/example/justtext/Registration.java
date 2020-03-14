@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -21,6 +22,7 @@ public class Registration extends AppCompatActivity {
     private Button btn_register;
     private String email,password;
     private FirebaseAuth mFirebaseAuth;
+    private TextView tv_gotoLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,15 @@ public class Registration extends AppCompatActivity {
         editEmail = findViewById(R.id.register_email);
         editPassword = findViewById(R.id.register_password);
         btn_register = findViewById(R.id.btn_register);
+        tv_gotoLogin = findViewById(R.id.tv_gotoLogin);
+
+        tv_gotoLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Registration.this,Login.class);
+                startActivity(intent);
+            }
+        });
 
         mFirebaseAuth = FirebaseAuth.getInstance();
 

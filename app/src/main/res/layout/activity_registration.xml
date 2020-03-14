@@ -8,6 +8,7 @@
     tools:context=".Registration">
     <LinearLayout
         android:layout_marginTop="100dp"
+        android:layout_marginBottom="100dp"
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="wrap_content">
@@ -32,4 +33,11 @@
             android:layout_height="wrap_content"/>
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_gotoLogin"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:text="Login Account !"
+        android:layout_height="wrap_content"/>
 </LinearLayout>
